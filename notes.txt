@@ -1,6 +1,41 @@
-python manage.py runserver
+> npx create-react-app frontend
+> npm run start
 
-drawsql.app
-python manage.py migrate
+pip install virtualenv
+> virtualenv myenv
+> myenv\scripts\activate (need to activate)
 
-python manage.py createsuperuser
+> pip install django
+> django startproject backend
+> python manage.py startapp base 
+-- need to add INSTALL_APP in project settings.py
+-- need to include base.urls in urlpatterns in project urls.py
+
+> pip install djangorestframework
+-- need to add INSTALL_APP
+
+> pip install django-cors-headers
+-- need to add INSTALL_APP 'corseheaders'
+-- need to add MIDDLEWARE
+-- need to add CORS_ALLOW_ORIGINS = True
+-- need to add proxy in package.json in frontend project
+
+> python manage.py migrate
+> python manage.py createsuperuser
+-- need to setup username, email, password
+-- open localhost:8000/admin
+
+> pip install pillow
+-- can use models.ImageField
+-- need to configure static folder
+--- create static/images
+--- in settings.py 
+----- set STATICFILES_DIRS = [ BASE_DIR / 'static' ]
+----- set MEDIA_ROOT = 'static/images'
+----- set MEDIA_URL = '/images/' and from django.conf import settings, from django.conf.urls.static import static
+----- urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT);
+
+> python manage.py runserver
+
+useful resources
+- drawsql.app
