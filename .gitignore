@@ -1,5 +1,7 @@
 .idea
 
+**/node_modules
+
 myenv/
 
 **/__pycache__
