@@ -1,4 +1,5 @@
 > npx create-react-app frontend
+> npm i react react-redux redux-thunk redux-devtools-extension
 > npm run start
 
 pip install virtualenv
@@ -39,3 +40,12 @@ pip install virtualenv
 
 useful resources
 - drawsql.app
+
+vs code
+- es7 snippet
+-- imp, imd, rfce
+- bracket pair colorizer
+- auto rename tag
+- prettier code formatter
+
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
