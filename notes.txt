@@ -2,9 +2,9 @@
 > npm i react react-redux redux-thunk redux-devtools-extension
 > npm run start
 
-pip install virtualenv
+> python -m pip install virtualenv
 > virtualenv myenv
-> myenv\scripts\activate (need to activate)
+> myenv\scripts\activate (need to activate) 'source myenv/bin/activate' - for mac os
 
 > pip install django
 > django startproject backend
