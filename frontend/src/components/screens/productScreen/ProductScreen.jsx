@@ -2,12 +2,12 @@ import React, {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {Link} from 'react-router-dom';
 import {Row, Col, Image, ListGroup, Button, Card, Form} from "react-bootstrap";
-import {Rating} from "../../rating/Rating";
+import Rating from "../../rating/Rating";
 import {listProductDetails} from "../../../actions/productActions";
-import {Loader} from "../../loader/Loader";
-import {Message} from "../../meassage/Message";
+import Loader from "../../loader/Loader";
+import Message from "../../meassage/Message";
 
-const ProductScreen = ({match, history}) => {
+function ProductScreen({match, history}) {
     const dispatch = useDispatch();
     const {error, product, loading} = useSelector(store => store.productDetails);
     const [qty, setQty] = useState(1);

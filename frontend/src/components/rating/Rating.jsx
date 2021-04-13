@@ -1,4 +1,4 @@
-const Star = ({starNumber, value, color}) => {
+function Star({starNumber, value, color}) {
     return (
         <span>
             <i style={{color}} className={
@@ -8,7 +8,7 @@ const Star = ({starNumber, value, color}) => {
     );
 }
 
-export const Rating = ({value, text, color}) => {
+function Rating({value, text, color}) {
     return (
         <div className='rating'>
             <Star starNumber={1} value={value} color={color}/>
@@ -19,4 +19,6 @@ export const Rating = ({value, text, color}) => {
             <span>{text && text}</span>
         </div>
     );
-};
+}
+
+export default Rating;

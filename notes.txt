@@ -36,10 +36,13 @@
 ----- set MEDIA_URL = '/images/' and from django.conf import settings, from django.conf.urls.static import static
 ----- urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT);
 
+> pip install djangorestframework-simplejwt
+
 > python manage.py runserver
 
 useful resources
 - drawsql.app
+- jwt.io
 
 vs code
 - es7 snippet

@@ -3,9 +3,11 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
 import { productListReducers, productDetailsReducers } from "./reducers/productReducers";
 import {cartReducer} from "./reducers/cartReducers";
+import {userLoginReducer} from "./reducers/userReducers";
 
 const reducer = combineReducers({
   cart: cartReducer,
+  userLogin: userLoginReducer,
   productList: productListReducers,
   productDetails: productDetailsReducers,
 });
@@ -13,9 +15,15 @@ const reducer = combineReducers({
 const cartItemsFromStorage = localStorage.getItem('cartItems');
 const cartItems = cartItemsFromStorage ? JSON.parse(cartItemsFromStorage) : [];
 
+const userInfoFromStorage = localStorage.getItem('userInfo');
+const userInfo = userInfoFromStorage ? JSON.parse(userInfoFromStorage) : null;
+
 const initialState = {
   cart: {
     cartItems,
+  },
+  userLogin: {
+    userInfo,
   }
 };
 

@@ -1,8 +1,8 @@
 import {Card} from "react-bootstrap";
-import {Rating} from "../rating/Rating";
+import Rating from "../rating/Rating";
 import {Link} from "react-router-dom";
 
-const Product = ({ product }) => {
+function Product({product}) {
     return (
         <Card className='my-3 p-3 rounded'>
             <Link to={`/product/${product._id}`}>

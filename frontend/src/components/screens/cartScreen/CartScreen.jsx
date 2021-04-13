@@ -3,10 +3,10 @@ import {useDispatch, useSelector} from "react-redux";
 import React, {useEffect} from "react";
 import {addToCart, removeFromCart} from "../../../actions/cartActions";
 import {Button, Card, Col, Form, Image, ListGroup, Row} from "react-bootstrap";
-import {Message} from "../../meassage/Message";
+import Message from "../../meassage/Message";
 import {Link} from "react-router-dom";
 
-const CartScreen = ({match, history}) => {
+function CartScreen({match, history}) {
     const {id: productId} = match.params;
     const {qty: qtyParam} = getQueryParams();
     const qty = qtyParam ? parseInt(qtyParam) : 1;
