@@ -5,7 +5,7 @@ import {logout} from "../../actions/userActions";
 
 function Header(props) {
     const dispatch = useDispatch();
-    const { userInfo } = useSelector(state => state.userLogin);
+    const {userInfo} = useSelector(state => state.userLogin);
 
     const logoutHandler = () => {
         dispatch(logout())
@@ -35,6 +35,13 @@ function Header(props) {
                                 <LinkContainer to="/login">
                                     <Nav.Link><i className='fas fa-user'/>Login</Nav.Link>
                                 </LinkContainer>
+                            )}
+                            {userInfo && userInfo.isAdmin && (
+                                <NavDropdown id='adminmenu' title='Admin'>
+                                    <LinkContainer to='/admin/users'>
+                                        <NavDropdown.Item>Users</NavDropdown.Item>
+                                    </LinkContainer>
+                                </NavDropdown>
                             )}
                         </Nav>
                     </Navbar.Collapse>

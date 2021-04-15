@@ -50,8 +50,6 @@ export const addQueryParams = (params, history) => {
         queryParams[key] = params[key];
     });
 
-    debugger;
-
     if (history) {
         const searchString = getSearchString(queryParams);
         const { pathname } = history.location;

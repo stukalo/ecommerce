@@ -52,3 +52,5 @@ vs code
 - prettier code formatter
 
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+Client-Id: AUcUUYYxKG3HUhFnLuDI69hygcY5Gb3qEfT4Ofg6qBaiZLYavxu7DeSfkFC71Kxim-fiTEdLOIII-8Bn

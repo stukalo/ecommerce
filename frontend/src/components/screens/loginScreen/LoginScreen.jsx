@@ -14,7 +14,7 @@ function LoginScreen({history}) {
 
     const dispatch = useDispatch();
 
-    const {redirect} = getQueryParams();
+    const redirect = getQueryParams().redirect || '/';
 
     const {error, loading, userInfo} = useSelector(state => state.userLogin);
 
@@ -38,6 +38,7 @@ function LoginScreen({history}) {
                 <Form.Group controlId='email'>
                     <Form.Label>Email Address</Form.Label>
                     <Form.Control
+                        required
                         type='email'
                         placeholder='Enter Email'
                         value={email}
@@ -47,6 +48,7 @@ function LoginScreen({history}) {
                 <Form.Group controlId='password'>
                     <Form.Label>Password</Form.Label>
                     <Form.Control
+                        required
                         type='password'
                         placeholder='Enter Password'
                         value={password}
